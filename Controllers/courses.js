@@ -26,7 +26,6 @@ const newCourse=new Courses({
     price:price,
     imageLink:imageLink
 });
-console.log(Courses.length)
 //saving new course entry
 const savedCourse=await newCourse.save();
 
@@ -45,7 +44,7 @@ res.status(200).json({
     }
 }
 
-//edit courrse controller
+//edit course controller
 exports.editCourses = async (req, res) => {
     try{
         const courseId = req.params.courseId;
@@ -107,3 +106,5 @@ exports.getCourses = async (req, res) => {
         })
     }
 }
+
+//delete course controller
